@@ -1,0 +1,50 @@
+﻿@model List<MVC_Sepet.Models.Context.Product>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <h3>En geniş ürün yelpazesi ile Northwind ayağınıza geldi.</h3>
+</div>
+<br />
+<br />
+<br />
+@*<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Product Name</th>
+            <th>Unit Price</th>
+            <th>Units In Stock</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.ProductId</td>
+                <td>@product.ProductName</td>
+                <td>@product.UnitPrice</td>
+                <td>@product.UnitsInStock</td>
+            </tr>
+        }
+    </tbody>
+</table>*@
+
+
+<div class="row">
+    @foreach (var product in Model)
+    {
+        <div class="col-md-3">
+            <div class="card m-3">
+                <div class="card-body">
+                    <h3>@product.ProductName</h3>
+                    <p>@product.UnitPrice</p>
+                    <button class="btn btn-primary">Sepete Ekle</button>
+                </div>
+            </div>
+        </div>          
+    }
+</div>
