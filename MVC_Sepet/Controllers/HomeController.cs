@@ -29,6 +29,12 @@ namespace MVC_Sepet.Controllers
             return View();
         }
 
+        public IActionResult AddToCart(int id)
+        {
+            //Sepete ürünün eklenmesi ve işlemin anasayfaya yönlendirilmesi
+            return RedirectToAction("Index");
+        }
+
         
     }
 }
