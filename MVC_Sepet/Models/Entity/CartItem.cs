@@ -11,8 +11,8 @@
         public int Id { get; set; }
         public short Quantity { get; set; }
         public string ProductName { get; set; }
-        public decimal UnitPrice { get; set; }
-        public decimal SubTotal
+        public decimal? UnitPrice { get; set; }
+        public decimal? SubTotal
         {
             get
             {

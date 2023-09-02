@@ -1,0 +1,43 @@
+﻿@model MVC_Sepet.Models.Entity.AppUser
+
+
+
+@{
+    ViewData["Title"] = "CompleteCart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-6 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                <h3>Ödeme Bilgileri</h3>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <div>
+                       <label>Ad Soyad :</label>
+                       <input type="text" class="form-control" asp-for="AdSoyad"/>
+                    </div>
+                    <div>
+                        <label>Kredi Kartı Numarası : </label>
+                    <input type="number" class="form-control" asp-for="KrediKart"/>
+                    </div>
+                    <div class="d-flex">
+                        <div>
+                            <label>SKT : </label>
+                            <input type="date" class="form-control" asp-for="KrediKartTarih"/>
+                        </div>
+                        <div class="ms-3">
+                            <label>CVV : </label>
+                            <input type="number" class="form-control" asp-for="CVV"/>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary mt-3">Ödeme Yap</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
